@@ -15,7 +15,7 @@ namespace BooksLibrary
         public string Price { private set; get; }
 
         ///<summary>
-        ///private constructor, that get information about
+        ///Private constructor, that get information about
         ///properties of the class with a help of Reflection
         /// </summary>
         private Book() 
@@ -24,7 +24,7 @@ namespace BooksLibrary
         }
 
         /// <summary>
-        /// public constructor: initialize fields
+        /// Public constructor: initialize fields
         /// </summary>
         /// <param name="values">source parameters</param>
         public Book(string[] values) : this()
