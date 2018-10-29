@@ -13,7 +13,7 @@ namespace BooksLibrary
         /// <summary>
         /// Constructor with default parameter 
         /// </summary>
-        /// <param name="path">directory with storage file</param>
+        /// <param name="path">Directory with storage file</param>
         public BookListService(string path = "BooksStorageFile")
         {
             this.path = path;
@@ -22,7 +22,7 @@ namespace BooksLibrary
         /// <summary>
         /// Method add object into collection
         /// </summary>
-        /// <param name="book">instance to add to the collection</param>
+        /// <param name="book">Instance to add to the collection</param>
         public void AddBook(Book book)
         {
             if (CompareBooks(book))
@@ -34,7 +34,7 @@ namespace BooksLibrary
         /// <summary>
         /// Method remove the same object as argument from the collection
         /// </summary>
-        /// <param name="book">instance that we try to remove</param>
+        /// <param name="book">Instance that we try to remove</param>
         public void RemoveBook(Book book)
         {
             if (!CompareBooks(book))
@@ -48,7 +48,7 @@ namespace BooksLibrary
         /// Compare argument with instances in the collection 
         /// </summary>
         /// <param name="book"></param>
-        /// <returns>bool result</returns>
+        /// <returns>Bool result</returns>
         private bool CompareBooks(Book book)
         {
             for (int i = 0; i < booksList.Count; i++)
@@ -66,9 +66,9 @@ namespace BooksLibrary
         /// Allow to perform search in the collection 
         /// according to tag
         /// </summary>
-        /// <param name="tag">key word</param>
-        /// <param name="equality">comparator</param>
-        /// <returns>collection of found objects</returns>
+        /// <param name="tag">Key word</param>
+        /// <param name="equality">Comparator</param>
+        /// <returns>Collection of found objects</returns>
         public List<Book> FindBooksByTag(string tag, IEqualityComparer<Book> equality)
         {
             Book key = Wrapper(tag);
@@ -88,7 +88,7 @@ namespace BooksLibrary
         /// <summary>
         /// Method for sorting instances in the collection
         /// </summary>
-        /// <param name="compare">comparartor</param>
+        /// <param name="compare">Comparartor</param>
         public void SortBooksByTag(IComparer<Book> compare)
         {
             booksList.Sort(compare);
@@ -97,8 +97,8 @@ namespace BooksLibrary
         /// <summary>
         /// Method creates wrapper-object for tag
         /// </summary>
-        /// <param name="tag">key word</param>
-        /// <returns>wrapper-object</returns>
+        /// <param name="tag">Key-word</param>
+        /// <returns>Wrapper-object</returns>
         private Book Wrapper(string tag)
         {
             PropertyInfo[] bookProperties = Book.GetProperties();

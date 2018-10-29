@@ -26,7 +26,7 @@ namespace BooksLibrary
         /// <summary>
         /// Public constructor: initialize fields
         /// </summary>
-        /// <param name="values">source parameters</param>
+        /// <param name="values">Source parameters</param>
         public Book(string[] values) : this()
         {
             if (values.Length < propertyList.Length)
@@ -42,8 +42,8 @@ namespace BooksLibrary
         /// Method of IComparable 'Book' to compare 
         /// objects with type 'Book'
         /// </summary>
-        /// <param name="book">source object for comparison</param>
-        /// <returns>result of comparison</returns>
+        /// <param name="book">Source object for comparison</param>
+        /// <returns>Result of comparison</returns>
         public int CompareTo(Book book)
         {
             if (Equals(book))
@@ -56,8 +56,8 @@ namespace BooksLibrary
         /// Method of IComparable for comparison
         /// objects with type 'object'
         /// </summary>
-        /// <param name="obj">source object for comparison</param>
-        /// <returns>result of comparison</returns>
+        /// <param name="obj">Source object for comparison</param>
+        /// <returns>Result of comparison</returns>
         int IComparable.CompareTo(object obj)
         {
             if (!(obj is Book))
@@ -69,7 +69,7 @@ namespace BooksLibrary
         /// <summary>
         /// Method represent object as a row
         /// </summary>
-        /// <returns>row with type 'string'</returns>
+        /// <returns>Row with type 'string'</returns>
         public override string ToString()
         {
             string summary = "";
@@ -85,8 +85,8 @@ namespace BooksLibrary
         /// <summary>
         /// Method to compare on equality of interface IEquatable 'Book'
         /// </summary>
-        /// <param name="book">object for comparison on equality</param>
-        /// <returns>bool result</returns>
+        /// <param name="book">Object for comparison on equality</param>
+        /// <returns>Bool result</returns>
         public bool Equals(Book book)
         {
             for (int i = 0; i < propertyList.Length - 1; i++)
@@ -106,8 +106,8 @@ namespace BooksLibrary
         /// <summary>
         /// Method to compare on equality
         /// </summary>
-        /// <param name="obj">object for comparison on equality</param>
-        /// <returns>result of equality comparison, type bool</returns>
+        /// <param name="obj">Object for comparison on equality</param>
+        /// <returns>Result of equality comparison, type bool</returns>
         public override bool Equals(object obj)
         {
             Book book = obj as Book;
@@ -121,7 +121,7 @@ namespace BooksLibrary
         /// <summary>
         /// Method for calculation unique code
         /// </summary>
-        /// <returns>hash</returns>
+        /// <returns>Hash</returns>
         public override int GetHashCode()     
         {
             int hash = 0;
@@ -137,7 +137,7 @@ namespace BooksLibrary
         /// <summary>
         /// Method gets properties parameters
         /// </summary>
-        /// <returns>array of properties parameters</returns>
+        /// <returns>Array of properties parameters</returns>
         public static PropertyInfo[] GetProperties()
         {
             return typeof(Book).GetProperties(BindingFlags.Instance | BindingFlags.Public);
