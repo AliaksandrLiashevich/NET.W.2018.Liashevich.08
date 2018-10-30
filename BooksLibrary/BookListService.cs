@@ -8,7 +8,7 @@ namespace BooksLibrary
     public class BookListService
     {
         private string path;
-        private List<Book> booksList = new List<Book>(); //что инициализирует тут переменную???
+        private List<Book> booksList = new List<Book>(); 
 
         /// <summary>
         /// Constructor with default parameter 
