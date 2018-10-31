@@ -16,6 +16,7 @@ namespace BankAccount
         {
             if (service == null || obj == null)
                 throw new ArgumentNullException();
+
             accounts = new List<Account>();
             typeService = service;
             calculator = obj;
